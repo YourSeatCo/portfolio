@@ -1,0 +1,29 @@
+<div class="slider-wrapper">
+    <div class="slider-body">
+        <div class="slider-inner">
+            <div class="slide-item carousel" *ngFor="let imgSrc of imgSrcArray; let i = index">
+                <img 
+                    *ngIf="i === currentSlide"
+                    [src]="imgSrc" 
+                    [class]="isMargin ? 'responsive-img slide mt-60' : 'responsive-img slide'" 
+                    alt=" "
+                >
+            </div>
+            <div class="slider-controls bg-light-gray vh-center ">
+                <div class="arrow-right control">
+                    <img class="slider-btn" src="/assets/imgs/angle-left.png" alt="Previous" (click)="onPreviousClick()">
+                </div>
+                <div class="slide-nav">
+                    <div class="pager">
+                        <span class="current">{{currentSlide+1}}</span>
+                        <span> of </span>
+                        <span class="last">{{imgSrcArray.length}} </span>
+                    </div>
+                </div>
+                <div class="arrow-left control">
+                    <img class="slider-btn" src="/assets/imgs/angle-right.png" alt="Next" (click)="onNextClick()">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

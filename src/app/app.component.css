@@ -1,0 +1,13 @@
+.page-navigator {
+    cursor: pointer;
+}
+
+.sticky {
+    background: #000;
+    box-shadow: 0 3px 12px 0 rgba(0,0,0,.08);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-width: 1441px;
+    z-index: 9999;
+}
