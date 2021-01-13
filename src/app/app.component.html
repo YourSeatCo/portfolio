@@ -1,49 +1,5 @@
 <section class="wrapper bg-black">
     <app-intro></app-intro>
     <!-- ./intro-sec -->
-    <section class="content" id="content" (scroll)="onWindowScroll($event);">
-        <div class="tabs">
-            <div class="tabs-header d-flex animated fadeInDown" id="navbar">
-                <div [ngClass]="(selectedTabIndex==0)?'tab-link active':'tab-link'" (click)="setTabIndex(0)">
-                    <div class="tab-link-inner">
-                        <h5 class="h5 text-upper font-12">Case Study</h5>
-                        <h2 class="h1 mt-18 font-20 c-2-heading">Montgomery County Social Services</h2>
-                        <p>Service Design for REAL Parenting Program</p>
-                    </div>
-                </div>
-                <div [ngClass]="(selectedTabIndex==1)?'tab-link active':'tab-link'" (click)="setTabIndex(1)">
-                    <div class="tab-link-inner">
-                        <h5 class="h5 text-upper font-12">Case Study</h5>
-                        <h2 class="h1 font-20 font-20">CHIP of New River Valley</h2>
-                        <p class="mt-8">Service Design for Nurse-Family Partnership Program</p>
-                    </div>
-                </div>
-            </div>
-            <!-- ./tabs header -->
-            <div class="tabs-body bg-white color-black" *ngIf="!isBottom">
-                <app-case-study1 *ngIf="selectedTabIndex == 0"></app-case-study1>
-                <app-case-study2 *ngIf="selectedTabIndex == 1"></app-case-study2>
-            </div>
-            <div class="tabs-header d-flex" *ngIf="selectedTabIndex == 0">
-                <div class="tab-link" (click)="setTabIndex(0)">
-                    <div class="tab-link-inner">
-                        <h5 class="h5 text-upper font-12">Case Study</h5>
-                        <h2 class="h1 mt-18 font-20 c-2-heading">Montgomery County Social Services</h2>
-                        <p>Service Design for REAL Parenting Program</p>
-                    </div>
-                </div>
-                <div class="tab-link active" (click)="setTabIndex(1)">
-                    <div class="tab-link-inner">
-                        <h5 class="h5 text-upper font-12">Case Study</h5>
-                        <h2 class="h1 font-20 font-20">CHIP of New River Valley</h2>
-                        <p class="mt-8">Service Design for Nurse-Family Partnership Program</p>
-                    </div>
-                </div>
-            </div>
-            <div class="tabs-body bg-white color-black" *ngIf="isBottom">
-                <app-case-study2 *ngIf="selectedTabIndex == 1"></app-case-study2>
-            </div>
-          <!-- ./tabs body -->
-        </div>
-  </section>
+
 </section>
